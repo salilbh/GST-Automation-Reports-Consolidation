@@ -1,5 +1,12 @@
 # GST-Automation-Reports-Consolidation
 Consolidation of Returns GSTR 2A to match input tax credits
+_______________________________________
+File "Steps to depict working of macros.docx" contains all the steps and information to help describe the steps in using the project
+
+The project was created for BFSI Sector to consolidate downloaded GSTR 2A from GST website through Excel VBA accuracy and speed as the volume of such files is huge and accuracy is of utmost important to match Input Tax Credit. 
+
+
+
 
 EXCEL VBA CODE
 
