@@ -4,6 +4,7 @@ Consolidation of Returns GSTR 2A to match input tax credits
 EXCEL VBA CODE
 
 
+
 Sub ConslidateWorkbooks()
 
 
@@ -12,7 +13,7 @@ Dim StartTime As Double
 Dim MinutesElapsed As String
 Dim EstimatedTotalTime As String
 
-'Remember time when macro starts
+'Remember time when macro starts'
 StartTime = Timer
 
 
@@ -21,7 +22,7 @@ Application.ScreenUpdating = False
     Dim xRow As Long
     Dim xDirect$, xFname$, InitialFoldr$
      
-    InitialFoldr$ = Cells(1, 2).Value '<<< Startup folder to begin searching from
+    InitialFoldr$ = Cells(1, 2).Value '<<< Startup folder to begin searching from'
      
     With Application.FileDialog(msoFileDialogFolderPicker)
         .InitialFileName = Application.DefaultFilePath & "\"
@@ -44,7 +45,7 @@ Application.ScreenUpdating = False
 
 
 
-'Created by Sumit Bansal from https://trumpexcel.com
+
 Dim folderPath As String
 Dim FileName As String
 Dim Sheet As Worksheet
@@ -92,7 +93,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
  
  
  
-' copy sheet b2b
+' copy sheet b2b'
     Windows(FileName).Activate
     Sheets("B2B").Select
     Rows("1:6").Select
@@ -125,7 +126,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
         Windows(FileName).Activate
     Range("A1:P1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -139,7 +140,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     End If
     
 
-' copy sheet B2BA
+' copy sheet B2BA'
 
     Windows(FileName).Activate
 
@@ -172,7 +173,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     Windows(FileName).Activate
         Range("A1:R1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -183,7 +184,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     End If
      
      
-     ' copy sheet CDNR
+     ' copy sheet CDNR'
 
     Windows(FileName).Activate
     Sheets("CDNR").Select
@@ -216,7 +217,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
         Windows(FileName).Activate
     Range("A1:O1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -228,7 +229,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     End If
     
     
-         ' copy sheet CDNRA
+         ' copy sheet CDNRA'
 
     Windows(FileName).Activate
 
@@ -261,7 +262,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     Windows(FileName).Activate
         Range("A1:R1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -271,7 +272,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
 
     End If
      
-         ' copy sheet ISD
+         ' copy sheet ISD'
 
     Windows(FileName).Activate
     Sheets("ISD").Select
@@ -303,7 +304,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
         Windows(FileName).Activate
     Range("A1:P1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -314,7 +315,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
 
     End If
     
-             ' copy sheet ISDA
+             ' copy sheet ISDA'
 
     Windows(FileName).Activate
 
@@ -346,7 +347,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     Windows(FileName).Activate
         Range("A1:S1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -358,8 +359,8 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
      
      
      
-             ' copy sheet TDS
-
+             ' copy sheet TDS'
+             
     Windows(FileName).Activate
     Sheets("TDS").Select
     Rows("1:6").Select
@@ -375,7 +376,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     
     Cells(1, 8).Value = FileName
     If T = 1 And Cells(1, 1) <> "" Then
-'        Range(Cells(1, 8), Cells(1, 8)).Select
+
         Range("A1:H1").Select
         
     ElseIf T > 1 And Cells(1, 1) <> "" Then
@@ -393,9 +394,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     Cells(G, 1).Select
     
         Windows(FileName).Activate
-'    Range("A1:H1").Select
-'    Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -407,7 +406,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     End If
     
     
-             ' copy sheet TDSA
+             ' copy sheet TDSA'
 
     Windows(FileName).Activate
     Sheets("TDSA").Select
@@ -439,7 +438,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
         Windows(FileName).Activate
     Range("A1:I1").Select
     Range(Selection, Selection.End(xlDown)).Select
-'    Range(Selection, Selection.End(xlToRight)).Select
+
     Selection.Copy
     
     Windows("Output.xlsx").Activate
@@ -452,7 +451,7 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     
     
     
-             ' copy sheet TCS
+             ' copy sheet TCS'
 
     Windows(FileName).Activate
     Sheets("TCS").Select
@@ -508,13 +507,13 @@ Workbooks.Open FileName:=folderPath & FileName, ReadOnly:=False
     End If
     
      
- 'For Each Sheet In ActiveWorkbook.Sheets
+
  
  
- 'Sheet.Copy After:=ThisWorkbook.Sheets(1)
+
  
  
- 'Next Sheet
+
  
  
  Windows(FileName).Activate
@@ -550,6 +549,7 @@ End Sub
 
 
 
+
 Sub deleteSubtotal()
 
 End Sub
@@ -559,7 +559,7 @@ Dim StartTime As Double
 Dim MinutesElapsed As String
 Dim EstimatedTotalTime As String
 
-'Remember time when macro starts
+'Remember time when macro starts'
         StartTime = Timer
 
 
@@ -763,11 +763,10 @@ End Sub
 
 
 Sub B2B_RemoveSubTotals()
-'
-' Macro3 Macro
-'
 
-'
+' Macro3 Macro'
+
+
     Range("A12").Select
     Selection.EntireColumn.Insert
     Rows("7:7").Select
@@ -827,11 +826,11 @@ End Sub
 
 
 Sub B2BA_RemoveSubTotals()
-'
-' Macro1 Macro
-'
 
-'
+' Macro1 Macro'
+
+
+
     Range("A11").Select
     Selection.EntireColumn.Insert
     Range("A1").Select
@@ -887,11 +886,11 @@ End Sub
 
 
 Sub CDNR_RemoveSubTotals()
-'
-' Macro5 Macro
-'
 
-'
+' Macro5 Macro'
+
+
+
     Range("A10").Select
     Selection.EntireColumn.Insert
     Range("A1").Select
@@ -981,12 +980,13 @@ End Sub
 
 
 
-Sub Clear_FilesInfo()
-'
-' Macro6 Macro
-'
 
-'
+Sub Clear_FilesInfo()
+
+' Macro6 Macro'
+
+
+
     Range("A2").Select
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlDown)).Select
@@ -999,7 +999,7 @@ End Sub
 Sub SelectSourceFolder()
     Dim diaFolder As FileDialog
 
-    ' Open the file dialog
+    ' Open the file dialog'
     Set diaFolder = Application.FileDialog(msoFileDialogFolderPicker)
     diaFolder.AllowMultiSelect = False
     diaFolder.Show
@@ -1012,7 +1012,7 @@ End Sub
 Sub SelectOutputFile()
     Dim diaFolder As FileDialog
 
-    ' Open the file dialog
+    ' Open the file dialog'
     Set diaFolder = Application.FileDialog(msoFileDialogFolderPicker)
     diaFolder.AllowMultiSelect = False
     diaFolder.Show
